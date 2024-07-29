@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="conatiner">
+        <nav>
+          <img src="./Images/logo1.jpg" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <i class="fas fa-times"></i>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+      </div>
+      <div class="header-text">
+        <p>Web Developer</p>
+        <h1>
+          Hello, I'm <span>Saloni Mishra</span> <br />
+          From Sagar
+        </h1>
+      </div>
+      <img class="background" src="./Images/b1.jpg" />
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="aboutSec1">
+            <img src="./Images/Second.jpg" />
+          </div>
+          <div class="aboutSec2">
+            <h1 class="subtitle">About Me</h1>
+            <p>
+              I'm Saloni, a passionate learner in the world of Web development .
+              Although I may not have any formal work experience yet, I've
+              recently pursing B.Tech from Babulal Tarabai Institute of Research
+              and Technology.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('project')">Projects</p>
+            </div>
+
+            <div id="skills" class="tab-contents active-tab">
+              <ul>
+                <li><span>Front-end </span><br />HTML, CSS, JavaScript</li>
+                <li><span>FrameWork</span><br />Bootstrap, Talwind</li>
+                <li><span>Database</span><br />SQL</li>
+                <li><span>Back-end</span><br />JAVA</li>
+                <li><span>Version Control</span><br />Git & Github</li>
+                <li><span>Subjects</span><br />OOPS, DSA, DBMS, OS</li>
+              </ul>
+            </div>
+            <div id="education" class="tab-contents">
+              <ul>
+                <li>
+                  <span>B.Tech - 2025 </span><br />Babulal Tarabai Institute of
+                  Reasearch and Technology, Sagar(M.P.)<br />Branch : Computer
+                  Science<br />CGPA : 7.29
+                </li>
+                <li>
+                  <span>12th - 2021</span><br />Hulasi Ram Mukharya Girls High
+                  Secondary School, Sagar<br />Percentage : 79%
+                </li>
+              </ul>
+            </div>
+
+            <div id="project" class="tab-contents">
+              <ul>
+                <li>
+                  <span>Zomato</span><br />A Zomato clone is a replica or
+                  imitation of the popular online food delivery and restaurant
+                  discovery platform, Zomato.
+                </li>
+                <li>
+                  <span>Spotify</span><br />The "spotify-clone" project is a web
+                  application that replicates the core functionality of the
+                  popular music streaming service Spotify.
+                </li>
+                <li>
+                  <span> Registration Form</span><br />A registration form is a
+                  document with a set of fields that a person fills out and
+                  sends to a business or individual to register for an event,
+                  program, membership, list, and so on.
+                </li>
+                <li>
+                  <span>My Library</span><br />A Library Management System is a
+                  software application used by libraries to manage their
+                  resources efficiently.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------Portfolio----------- -->
+   <div class="portfolio"></div>
+    <!-- ----------------Contact-------------------- -->
+
+    <div id="contact">
+      <div class="contanier">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i> saloni123@gmail.com</p>
+            <p><i class="fa-sharp fa-solid fa-phone"></i> 433454563</p>
+            <div class="social-icons">
+              <a href="https://github.com/SaloniMishra25"
+                ><i class="fa-brands fa-github git"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/saloni-mishra-b52208237/"
+                ><i class="fa-brands fa-linkedin linkdin"></i
+              ></a>
+            </div>
+            <a href="./Images/download.png" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+            </form>
+            <button type="submit" class="btn btn2">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
